@@ -14,7 +14,7 @@ const SignIn = () => {
     try {
         const res = await signInWithEmailAndPassword(email, password);
         console.log({res});
-        sessionStorage.setItem('user', true)
+        sessionStorage.getItem('user', true)
         setEmail('');
         setPassword('');
         router.push('/')
@@ -46,6 +46,12 @@ const SignIn = () => {
           className="w-full p-3 bg-indigo-600 rounded text-white hover:bg-indigo-500"
         >
           Sign In
+        </button>
+        <button onClick={() => {
+        router.push('/sign-up')
+        
+        }}>
+          Don't have an account? Sign Up
         </button>
       </div>
     </div>
