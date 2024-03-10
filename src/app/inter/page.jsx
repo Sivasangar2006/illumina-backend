@@ -1,7 +1,9 @@
 'use client'
 import {useState} from 'react';
+import { useRouter } from 'next/navigation';
 
 function RegistrationSuccessPage() {
+    const router = useRouter();
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900">
       <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg p-8">
